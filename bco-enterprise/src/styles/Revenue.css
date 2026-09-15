@@ -1,0 +1,252 @@
+.revenue-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+/* REVENUE CARDS */
+
+.revenue-card {
+    background: #faf7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 25px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.revenue-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.revenue-card-label {
+    display: block;
+    color: #777777;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+
+.revenue-card h2 {
+    margin: 0;
+    color: #171717;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.revenue-card p {
+    margin: 10px 0 0;
+    color: #110e0e;
+    font-size: 13px;
+}
+
+
+/* TOTAL REVENUE */
+
+.revenue-card:first-child {
+    border-top: 4px solid #d71920;
+}
+
+.revenue-card:first-child h2 {
+    color: #d71920;
+}
+
+
+/* EMPTY STATE */
+
+.revenue-empty {
+    margin-top: 30px;
+}
+
+
+.revenue-empty-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #ffe5e5;
+    color: #d71920;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* RECENT ORDERS */
+
+.revenue-orders {
+    margin-top: 30px;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+.revenue-section-header {
+    padding: 25px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.revenue-section-header h2 {
+    margin: 0 0 6px;
+    color: #171717;
+    font-size: 20px;
+}
+
+
+.revenue-section-header p {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* ORDER LIST */
+
+.revenue-order-list {
+    width: 100%;
+}
+
+
+.revenue-order {
+    display: grid;
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1fr;
+
+    align-items: center;
+
+    padding: 20px 25px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition: background 0.2s ease;
+}
+
+
+.revenue-order:last-child {
+    border-bottom: none;
+}
+
+
+.revenue-order:hover {
+    background: #fafafa;
+}
+
+
+.revenue-order div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.revenue-order span {
+    color: #999999;
+    font-size: 12px;
+}
+
+
+.revenue-order strong {
+    color: #222222;
+    font-size: 14px;
+}
+
+
+.revenue-order .paid {
+    color: #198754;
+}
+
+
+/* REFRESH BUTTON */
+
+.refresh-btn {
+    border: none;
+    background: #d71920;
+    color: #ffffff;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.refresh-btn:hover {
+    background: #b9151b;
+    transform: translateY(-1px);
+}
+
+
+/* ERROR MESSAGE */
+
+.error-message {
+    color: #d71920;
+    border-color: #ffd0d0;
+    background: #fff7f7;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .revenue-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .revenue-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .revenue-order {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .revenue-order {
+        grid-template-columns: 1fr;
+    }
+
+    .revenue-card h2 {
+        font-size: 24px;
+    }
+
+}

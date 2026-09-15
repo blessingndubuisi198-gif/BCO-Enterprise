@@ -1,0 +1,289 @@
+/* =========================================
+   SHIPPING PAGE
+========================================= */
+
+.service-page-shipping {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f7f8f7;
+
+  color: #111;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.service-page-hero {
+  width: 100%;
+
+  padding: 105px 7% 75px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.service-page-hero-content {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.service-page-label {
+  margin: 0 0 14px;
+
+  color: #0b3d20;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.service-page-hero h1 {
+  margin: 0 0 20px;
+
+  color: #111;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.service-page-hero-content > p:last-child {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.service-page-content {
+  width: 100%;
+
+  padding: 85px 7%;
+
+  box-sizing: border-box;
+}
+
+.service-page-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.service-page-heading {
+  margin-bottom: 45px;
+
+  text-align: center;
+}
+
+.service-page-heading p {
+  margin: 0 0 10px;
+
+  color: #0b3d20;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.service-page-heading h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: clamp(30px, 4vw, 45px);
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   SHIPPING CARDS
+========================================= */
+
+.service-page-shipping-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.service-page-info-card {
+  padding: 30px;
+
+  border: 1px solid #dce8e1;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-page-info-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.service-page-info-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background: #e8f0eb;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.service-page-info-card h3 {
+  margin: 0 0 10px;
+
+  color: #111;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.service-page-info-card p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   IMPORTANT NOTE
+========================================= */
+
+.service-page-note {
+  margin-top: 30px;
+
+  padding: 28px 30px;
+
+  border-left: 4px solid #0b3d20;
+
+  border-radius: 12px;
+
+  background: #eaf1ec;
+
+  box-sizing: border-box;
+}
+
+.service-page-note h3 {
+  margin: 0 0 8px;
+
+  color: #0b3d20;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.service-page-note p {
+  margin: 0;
+
+  color: #555;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .service-page-hero {
+    padding: 75px 20px 55px;
+  }
+
+  .service-page-hero h1 {
+    font-size: 40px;
+  }
+
+  .service-page-content {
+    padding: 60px 20px;
+  }
+
+  .service-page-shipping-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-page-info-card {
+    padding: 25px;
+  }
+
+  .service-page-note {
+    padding: 23px;
+  }
+
+}

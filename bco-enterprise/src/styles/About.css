@@ -1,0 +1,161 @@
+.about-section {
+  padding: 110px 7%;
+  background: #f7f8f6;
+}
+
+/* HEADER */
+
+.about-header {
+  max-width: 750px;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #0b3d20;
+}
+
+.about-header h2 {
+  margin: 0 0 25px;
+
+  font-size: 48px;
+  line-height: 1.15;
+  color: #071f14;
+  font-weight: 800;
+}
+
+.about-header p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5b625e;
+}
+
+/* CARDS */
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.about-card {
+  padding: 38px 32px;
+
+  background: white;
+  border: 1px solid #e5e9e5;
+  border-radius: 18px;
+
+  min-height: 270px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* NUMBER */
+
+.about-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: #0b3d20;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* CARD TEXT */
+
+.about-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 25px;
+  color: #071f14;
+}
+
+.about-card p {
+  margin: 0;
+
+  color: #626963;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* FEATURED CARD */
+
+.featured-about-card {
+  background: #0b3d20;
+  border-color: #0b3d20;
+}
+
+.featured-about-card .about-icon {
+  background: white;
+  color: #0b3d20;
+}
+
+.featured-about-card h3 {
+  color: white;
+}
+
+.featured-about-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 80px 5%;
+  }
+
+  .about-header h2 {
+    font-size: 40px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    min-height: auto;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 70px 25px;
+  }
+
+  .about-header h2 {
+    font-size: 34px;
+  }
+
+  .about-header p {
+    font-size: 16px;
+  }
+}

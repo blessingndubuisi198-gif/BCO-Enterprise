@@ -1,0 +1,101 @@
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-page {
+  min-height: 100vh;
+  background: #eef5f0;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.home-page main {
+  width: 100%;
+}
+
+
+/* =========================
+   GENERAL SECTION SPACING
+========================= */
+
+.home-page main > section {
+  width: 100%;
+}
+
+
+/* =========================
+   SMOOTH SECTION TRANSITION
+========================= */
+
+.home-page main > section:not(:first-child) {
+  position: relative;
+}
+
+
+/* =========================
+   SECTION DIVIDERS
+========================= */
+
+.home-page main > section:not(:first-child)::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: min(90%, 1200px);
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: rgba(11, 61, 32, 0.08);
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+.home-page img {
+  max-width: 100%;
+}
+
+
+/* =========================
+   BUTTON RESET / POLISH
+========================= */
+
+.home-page button {
+  font-family: inherit;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.home-page a {
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .home-page main > section:not(:first-child)::before {
+    width: 85%;
+  }
+
+}

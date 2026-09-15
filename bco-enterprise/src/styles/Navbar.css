@@ -1,0 +1,251 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 40px;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  cursor: pointer;
+  line-height: 1;
+}
+
+.logo h2 {
+  color: #0b3d20;
+
+  font-size: 28px;
+
+  margin: 0;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.logo p {
+  margin: 4px 0 0;
+
+  font-size: 11px;
+
+  color: #555;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: #222;
+
+  padding: 5px 0;
+
+  transition: color 0.3s ease;
+}
+
+
+/* Remove old zig-zag positioning */
+
+.nav-up,
+.nav-down {
+  top: 0;
+}
+
+
+/* =========================================
+   HOVER UNDERLINE
+========================================= */
+
+.nav-links li::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #0b3d20;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #0b3d20;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   ICONS
+========================================= */
+
+.nav-icons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  font-size: 18px;
+}
+
+.nav-icons svg {
+  cursor: pointer;
+
+  color: #222;
+
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.nav-icons svg:hover {
+  color: #0b3d20;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  nav {
+    padding: 6px 25px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-icons {
+    gap: 16px;
+
+    font-size: 18px;
+  }
+
+  .logo h2 {
+    font-size: 26px;
+  }
+
+  .logo p {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   CART
+========================================= */
+
+.cart-icon {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+
+  top: -10px;
+
+  right: -10px;
+
+  background: #d40000;
+
+  color: white;
+
+  width: 18px;
+
+  height: 18px;
+
+  border-radius: 50%;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}

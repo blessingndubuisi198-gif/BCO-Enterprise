@@ -1,0 +1,385 @@
+/* =========================================
+   ADMIN CATEGORY PAGE
+========================================= */
+
+.admin-category-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  background: #f7f8f7;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-category-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 45px 50px;
+
+  box-sizing: border-box;
+
+  color: #111;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-category-header {
+  width: 100%;
+
+  margin-bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-category-label {
+  margin: 0 0 8px;
+
+  color: #0b3d20;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 2.5px;
+}
+
+.admin-category-header h1 {
+  margin: 0 0 8px;
+
+  color: #111;
+
+  font-size: 36px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.admin-category-header > div > p:last-child {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CATEGORY GRID
+========================================= */
+
+.admin-category-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CATEGORY CARD
+========================================= */
+
+.admin-category-card {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 150px;
+
+  padding: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border: 1px solid #e1e7e3;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-category-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================
+   CATEGORY ICON
+========================================= */
+
+.admin-category-icon {
+  width: 55px;
+  height: 55px;
+
+  flex: 0 0 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #e9f1ec;
+
+  color: #0b3d20;
+
+  font-size: 24px;
+
+  font-weight: 900;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CATEGORY INFORMATION
+========================================= */
+
+.admin-category-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.admin-category-info h2 {
+  margin: 0 0 6px;
+
+  color: #111;
+
+  font-size: 19px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  word-break: break-word;
+}
+
+.admin-category-info p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   STOCK
+========================================= */
+
+.admin-category-stock {
+  min-width: 55px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  text-align: right;
+}
+
+.admin-category-stock span {
+  color: #888;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.admin-category-stock strong {
+  color: #0b3d20;
+
+  font-size: 20px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.admin-category-message {
+  width: 100%;
+
+  padding: 50px 30px;
+
+  border: 1px solid #e1e7e3;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.admin-category-message h2 {
+  margin: 0 0 8px;
+
+  color: #111;
+
+  font-size: 22px;
+}
+
+.admin-category-message p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.admin-category-error {
+  border-color: #f0cccc;
+
+  color: #a33;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-category-content {
+    padding: 40px 35px;
+  }
+
+  .admin-category-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .admin-category-content {
+    padding: 35px 25px;
+  }
+
+  .admin-category-header h1 {
+    font-size: 32px;
+  }
+
+  .admin-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-category-content {
+    padding: 25px 18px;
+  }
+
+  .admin-category-header {
+    margin-bottom: 25px;
+  }
+
+  .admin-category-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-category-header > div > p:last-child {
+    font-size: 14px;
+  }
+
+  .admin-category-card {
+    min-height: 125px;
+
+    padding: 20px;
+
+    gap: 14px;
+  }
+
+  .admin-category-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+
+    font-size: 20px;
+
+    border-radius: 12px;
+  }
+
+  .admin-category-info h2 {
+    font-size: 17px;
+  }
+
+  .admin-category-stock strong {
+    font-size: 18px;
+  }
+}

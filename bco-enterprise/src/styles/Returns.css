@@ -1,0 +1,294 @@
+/* =========================================
+   RETURNS PAGE
+========================================= */
+
+.service-page-returns {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f7f8f7;
+
+  color: #111;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.returns-hero {
+  width: 100%;
+
+  padding: 105px 7% 75px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.returns-hero-content {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.returns-label {
+  margin: 0 0 14px;
+
+  color: #0b3d20;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.returns-hero h1 {
+  margin: 0 0 20px;
+
+  color: #111;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.returns-hero-content > p:last-child {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.returns-content {
+  width: 100%;
+
+  padding: 85px 7%;
+
+  box-sizing: border-box;
+}
+
+.returns-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.returns-heading {
+  margin-bottom: 45px;
+
+  text-align: center;
+}
+
+.returns-heading p {
+  margin: 0 0 10px;
+
+  color: #0b3d20;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.returns-heading h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: clamp(30px, 4vw, 45px);
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   RETURNS GRID
+========================================= */
+
+.returns-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.returns-card {
+  padding: 30px;
+
+  border: 1px solid #dce8e1;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.returns-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.returns-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background: #e8f0eb;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.returns-card h3 {
+  margin: 0 0 10px;
+
+  color: #111;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.returns-card p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.returns-note {
+  margin-top: 30px;
+
+  padding: 28px 30px;
+
+  border-left: 4px solid #0b3d20;
+
+  border-radius: 12px;
+
+  background: #eaf1ec;
+
+  box-sizing: border-box;
+}
+
+.returns-note h3 {
+  margin: 0 0 8px;
+
+  color: #0b3d20;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.returns-note p {
+  margin: 0;
+
+  color: #555;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .returns-hero {
+    padding: 75px 20px 55px;
+  }
+
+  .returns-hero h1 {
+    font-size: 40px;
+  }
+
+  .returns-content {
+    padding: 60px 20px;
+  }
+
+  .returns-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .returns-card {
+    padding: 25px;
+  }
+
+  .returns-note {
+    padding: 23px;
+  }
+
+}

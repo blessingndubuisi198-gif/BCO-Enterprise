@@ -1,0 +1,209 @@
+.customers-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+}
+
+
+/* TABLE */
+
+.customers-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+
+/* TABLE HEADER */
+
+.customers-table thead {
+    background: #111111;
+}
+
+.customers-table th {
+    padding: 18px 20px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* TABLE BODY */
+
+.customers-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+    font-size: 14px;
+}
+
+.customers-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.customers-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.customers-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* CUSTOMER NAME */
+
+.customer-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.customer-name strong {
+    color: #171717;
+    font-size: 14px;
+}
+
+
+/* CUSTOMER AVATAR */
+
+.customer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d71920;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+
+/* ACCOUNT BADGES */
+
+.account-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* CUSTOMER */
+
+.account-badge.customer {
+    background: #f1f1f1;
+    color: #444444;
+}
+
+
+/* ADMIN */
+
+.account-badge.admin {
+    background: #ffe5e5;
+    color: #d71920;
+}
+
+
+/* EMPTY / LOADING / ERROR MESSAGE */
+
+.admin-message {
+    margin-top: 30px;
+    padding: 50px 30px;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.admin-message h2 {
+    margin-bottom: 10px;
+    color: #171717;
+    font-size: 22px;
+}
+
+.admin-message p {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* ERROR */
+
+.error-message {
+    color: #d71920;
+    border-color: #ffd0d0;
+    background: #fff7f7;
+}
+
+
+/* REFRESH BUTTON */
+
+.refresh-btn {
+    border: none;
+    background: #d71920;
+    color: #ffffff;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.refresh-btn:hover {
+    background: #b9151b;
+    transform: translateY(-1px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .admin-page-content {
+        padding: 20px;
+    }
+
+    .admin-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .refresh-btn {
+        width: 100%;
+    }
+
+    .customers-table-wrapper {
+        margin-top: 20px;
+    }
+
+    .customers-table th,
+    .customers-table td {
+        padding: 14px;
+    }
+
+}

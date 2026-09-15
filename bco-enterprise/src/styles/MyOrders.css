@@ -1,0 +1,395 @@
+/* =================================
+   BCO ENTERPRISE — MY ORDERS
+   GREEN THEME
+================================= */
+
+.orders-page {
+  min-height: 100vh;
+  padding: 70px 30px;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(0, 82, 47, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(35, 120, 75, 0.16),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #030504 0%,
+      #080b09 50%,
+      #020302 100%
+    );
+}
+
+.orders-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.orders-label {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8fc9a8;
+}
+
+.orders-header h1 {
+  margin: 0 0 8px;
+  font-size: 42px;
+  color: #ffffff;
+}
+
+.orders-header p {
+  margin: 0;
+  color: #a7b0aa;
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+.orders-header button,
+.empty-orders button {
+  border: none;
+  padding: 13px 22px;
+  border-radius: 8px;
+
+  background: #064d2b;
+  color: #ffffff;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.orders-header button:hover,
+.empty-orders button:hover {
+  background: #08733f;
+  transform: translateY(-2px);
+}
+
+/* =================================
+   ORDER LIST
+================================= */
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* =================================
+   ORDER CARD
+================================= */
+
+.order-card {
+  background: #111412;
+  color: #ffffff;
+
+  border: 1px solid #26322b;
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.45);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  border-color: #356b4c;
+}
+
+/* =================================
+   ORDER HEADER
+================================= */
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #2a332e;
+}
+
+.order-card-header div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-card-header span:first-child {
+  font-size: 12px;
+  color: #8e9992;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-card-header strong {
+  color: #ffffff;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+/* =================================
+   ORDER STATUS
+================================= */
+
+.order-status {
+  padding: 8px 15px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-status.processing {
+  background: #dcebdc;
+  color: #17452d;
+}
+
+.order-status.delivered {
+  background: #1f6b45;
+  color: #ffffff;
+}
+
+/* =================================
+   ORDER ITEMS
+================================= */
+
+.order-items {
+  padding: 22px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* PRODUCT IMAGE */
+
+.order-item img {
+  width: 78px;
+  height: 78px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  background: #202522;
+
+  border: 1px solid #344139;
+}
+
+/* PRODUCT INFORMATION */
+
+.order-item > div {
+  flex: 1;
+}
+
+.order-item h3 {
+  margin: 0 0 6px;
+
+  font-size: 16px;
+
+  color: #ffffff;
+}
+
+.order-item p {
+  margin: 0;
+
+  color: #a6b0a9;
+
+  font-size: 14px;
+}
+
+.order-item > strong {
+  color: #dce9df;
+  font-size: 15px;
+}
+
+/* =================================
+   ORDER FOOTER
+================================= */
+
+.order-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 70px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #2a332e;
+}
+
+.order-card-footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-card-footer span {
+  font-size: 12px;
+
+  color: #8e9992;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-card-footer strong {
+  color: #ffffff;
+}
+
+/* =================================
+   EMPTY ORDERS
+================================= */
+
+.empty-orders {
+  background: #111412;
+
+  color: #ffffff;
+
+  padding: 70px 30px;
+
+  text-align: center;
+
+  border-radius: 16px;
+
+  border: 1px solid #26322b;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.empty-orders-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.empty-orders h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+}
+
+.empty-orders p {
+  margin-bottom: 25px;
+
+  color: #a7b0aa;
+}
+
+/* =================================
+   LOADING / ERROR
+================================= */
+
+.orders-message {
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #dce9df;
+
+  font-size: 18px;
+}
+
+.orders-message.error {
+  color: #8fc9a8;
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+  .orders-page {
+    padding: 35px 15px;
+  }
+
+  .orders-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .orders-header h1 {
+    font-size: 32px;
+  }
+
+  .orders-header button {
+    width: 100%;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+
+  .order-card-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .order-status {
+    white-space: nowrap;
+  }
+
+  .order-item {
+    gap: 12px;
+  }
+
+  .order-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .order-item h3 {
+    font-size: 14px;
+  }
+
+  .order-item p {
+    font-size: 13px;
+  }
+
+  .order-item > strong {
+    font-size: 13px;
+  }
+
+  .order-card-footer {
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

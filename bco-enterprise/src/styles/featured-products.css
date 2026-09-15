@@ -1,0 +1,190 @@
+/* =========================================
+   FEATURED PRODUCTS SECTION
+========================================= */
+
+.featured-products {
+  width: 100%;
+  padding: 100px 7%;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      rgba(247, 250, 248, 0.94),
+      rgba(247, 250, 248, 0.94)
+    ),
+    url("/images/featured-products-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   FEATURED HEADER
+========================================= */
+
+.featured-header {
+  width: 100%;
+  max-width: 750px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #0b3d20;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.featured-header h2 {
+  margin: 0 0 15px;
+
+  color: #111111;
+
+  font-size: clamp(36px, 4vw, 50px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.featured-header p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.featured-grid {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   EMPTY / LOADING MESSAGE
+========================================= */
+
+.featured-empty {
+  margin: 40px auto 0;
+
+  text-align: center;
+
+  color: #666666;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .featured-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .featured-products {
+    padding: 80px 5%;
+  }
+
+  .featured-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .featured-products {
+    padding: 70px 20px;
+  }
+
+  .featured-header {
+    margin-bottom: 40px;
+  }
+
+  .featured-header h2 {
+    font-size: 34px;
+  }
+
+  .featured-header p {
+    font-size: 15px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+}
