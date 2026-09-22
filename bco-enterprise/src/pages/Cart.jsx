@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import "../styles/Cart.css";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 
 function Cart() {
   const {
@@ -64,7 +65,7 @@ function Cart() {
 
                   <div className="cart-item-image">
                     <img
-                      src={`http://localhost:5000${item.image}`}
+                      src={`${API_BASE_URL}${item.image}`}
                       alt={item.name}
                     />
                   </div>

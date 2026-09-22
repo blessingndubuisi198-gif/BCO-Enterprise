@@ -1,4 +1,5 @@
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 
 const API_URL = "https://dummyjson.com/products";
 
@@ -209,7 +210,7 @@ export const getPexelsImages =
   async (query) => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/pexels/search",
+        `${API_BASE_URL}/api/pexels/search`,
         {
           params: {
             query,

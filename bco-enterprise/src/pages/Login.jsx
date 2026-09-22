@@ -2,6 +2,7 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 
 import {
   FaUser,
@@ -29,7 +30,7 @@ function Login() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/login",
+        `${API_BASE_URL}/api/users/login`,
         {
           email,
           password,
@@ -51,7 +52,7 @@ function Login() {
     } catch (error) {
       alert(
         error.response?.data?.message ||
-        "Lgin Failed"
+        "Login Failed"
       );
     }
   }

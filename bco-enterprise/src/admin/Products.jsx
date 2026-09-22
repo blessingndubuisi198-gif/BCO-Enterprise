@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import API_BASE_URL from "../config/api";
 import Sidebar from "../components/Sidebar";
 import "../styles/Products.css";
 
@@ -14,7 +15,7 @@ function Products() {
     const fetchProducts = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/products"
+          `${API_BASE_URL}/api/products`
         );
 
         setProducts(data);
@@ -50,7 +51,7 @@ function Products() {
       }
 
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`,
+        `${API_BASE_URL}/api/products/${id}`,
         {
           headers: {
             Authorization: `Bearer ${userInfo.token}`,
@@ -90,7 +91,7 @@ function Products() {
       return image;
     }
 
-    return `http://localhost:5000${image}`;
+    return `${API_BASE_URL}${image}`;
   };
 
   return (

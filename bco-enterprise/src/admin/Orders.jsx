@@ -1,6 +1,7 @@
-import { useEffect, useState  } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import Sidebar from "../components/Sidebar"; 
+import API_BASE_URL from "../config/api";
+import Sidebar from "../components/Sidebar";
 import "../styles/Orders.css";
 
 function Orders() {
@@ -24,7 +25,7 @@ function Orders() {
       }
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/orders",
+        `${API_BASE_URL}/api/orders`,
         {
           headers: {
             Authorization: `Bearer ${userInfo.token}`,
@@ -76,7 +77,7 @@ function Orders() {
       setUpdatingOrder(orderId);
 
       const { data } = await axios.put(
-        `http://localhost:5000/api/orders/${orderId}/status`,
+        `${API_BASE_URL}/api/orders/${orderId}/status`,
         {
           status: newStatus,
         },
@@ -360,7 +361,7 @@ function Orders() {
                                     "http"
                                   )
                                     ? item.image
-                                    : `http://localhost:5000${item.image}`
+                                    : `${API_BASE_URL}${item.image}`
                                 }
                                 alt={item.name}
                               />

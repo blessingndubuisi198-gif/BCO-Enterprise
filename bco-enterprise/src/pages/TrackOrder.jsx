@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../styles/TrackOrder.css";
+import API_BASE_URL from "../config/api";
 
 function TrackOrder() {
   const [orderId, setOrderId] = useState("");
@@ -22,7 +23,7 @@ function TrackOrder() {
       setOrder(null);
 
       const { data } = await axios.get(
-        `http://localhost:5000/api/orders/${orderId.trim()}`
+        `${API_BASE_URL}/api/orders/${orderId.trim()}`
       );
 
       setOrder(data);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 import Sidebar from "../components/Sidebar";
 import "../styles/Dashboard.css";
 
@@ -29,12 +30,12 @@ function Dashboard() {
         const [ordersResponse, productsResponse] =
           await Promise.all([
             axios.get(
-              "http://localhost:5000/api/orders",
+              `${API_BASE_URL}/api/orders`,
               config
             ),
 
             axios.get(
-              "http://localhost:5000/api/products"
+              `${API_BASE_URL}/api/products`
             ),
           ]);
 

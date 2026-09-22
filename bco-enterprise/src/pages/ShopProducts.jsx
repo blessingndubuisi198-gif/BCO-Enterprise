@@ -1,4 +1,3 @@
-
 import {
   useContext,
   useEffect,
@@ -8,6 +7,7 @@ import {
 import { useSearchParams } from "react-router-dom";
 
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 
 import { CartContext } from "../context/CartContext";
 
@@ -174,7 +174,7 @@ function Products() {
         */
 
         const { data } = await axios.get(
-          "http://localhost:5000/api/products"
+          `${API_BASE_URL}/api/products`
         );
 
         const bcoProducts = data.map(
@@ -416,7 +416,6 @@ function Products() {
   }
 
   /*
-    ========================================
     ERROR
     ========================================
   */
@@ -434,7 +433,6 @@ function Products() {
   }
 
   /*
-    ========================================
     PAGE
     ========================================
   */
@@ -510,8 +508,7 @@ function Products() {
                       "http"
                     )
                       ? product.image
-                      : "http://localhost:5000" +
-                        product.image
+                      : `${API_BASE_URL}${product.image}`
                   }
                   alt={product.name}
                 />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
+import API_BASE_URL from "../config/api";
 import "../styles/AdminDashboard.css";
 
 function AdminDashboard() {
@@ -34,17 +35,17 @@ function AdminDashboard() {
       const [productsResponse, customersResponse, ordersResponse] =
         await Promise.all([
           axios.get(
-            "http://localhost:5000/api/products",
+            `${API_BASE_URL}/api/products`,
             config
           ),
 
           axios.get(
-            "http://localhost:5000/api/users",
+            `${API_BASE_URL}/api/users`,
             config
           ),
 
           axios.get(
-            "http://localhost:5000/api/orders",
+            `${API_BASE_URL}/api/orders`,
             config
           ),
         ]);
@@ -69,11 +70,9 @@ function AdminDashboard() {
     }
   };
 
-
   useEffect(() => {
     fetchDashboardData();
   }, []);
-
 
   // Revenue from paid orders
   const paidOrders = orders.filter(
@@ -86,13 +85,11 @@ function AdminDashboard() {
     0
   );
 
-
   // Recent orders
   const recentOrders = orders
     .slice()
     .reverse()
     .slice(0, 5);
-
 
   return (
     <div className="admin-page">
@@ -122,7 +119,6 @@ function AdminDashboard() {
 
           </div>
 
-
           <button
             className="dashboard-refresh-btn"
             onClick={fetchDashboardData}
@@ -131,7 +127,6 @@ function AdminDashboard() {
           </button>
 
         </div>
-
 
         {/* LOADING */}
 
@@ -143,7 +138,6 @@ function AdminDashboard() {
 
         )}
 
-
         {/* ERROR */}
 
         {!loading && error && (
@@ -153,7 +147,6 @@ function AdminDashboard() {
           </div>
 
         )}
-
 
         {/* DASHBOARD */}
 
@@ -191,7 +184,6 @@ function AdminDashboard() {
 
               </div>
 
-
               {/* ORDERS */}
 
               <div className="dashboard-card">
@@ -218,7 +210,6 @@ function AdminDashboard() {
 
               </div>
 
-
               {/* CUSTOMERS */}
 
               <div className="dashboard-card">
@@ -244,7 +235,6 @@ function AdminDashboard() {
                 </p>
 
               </div>
-
 
               {/* PRODUCTS */}
 
@@ -274,7 +264,6 @@ function AdminDashboard() {
 
             </div>
 
-
             {/* OVERVIEW SECTION */}
 
             <div className="dashboard-grid">
@@ -298,7 +287,6 @@ function AdminDashboard() {
                   </div>
 
                 </div>
-
 
                 {recentOrders.length === 0 ? (
 
@@ -338,7 +326,6 @@ function AdminDashboard() {
 
                         </div>
 
-
                         <div>
 
                           <span>
@@ -351,7 +338,6 @@ function AdminDashboard() {
                           </strong>
 
                         </div>
-
 
                         <div>
 
@@ -367,7 +353,6 @@ function AdminDashboard() {
                           </strong>
 
                         </div>
-
 
                         <span
                           className={`dashboard-status ${
@@ -391,7 +376,6 @@ function AdminDashboard() {
 
               </div>
 
-
               {/* STORE OVERVIEW */}
 
               <div className="dashboard-section">
@@ -412,7 +396,6 @@ function AdminDashboard() {
 
                 </div>
 
-
                 <div className="store-overview">
 
                   <div className="overview-row">
@@ -427,7 +410,6 @@ function AdminDashboard() {
 
                   </div>
 
-
                   <div className="overview-row">
 
                     <span>
@@ -439,7 +421,6 @@ function AdminDashboard() {
                     </strong>
 
                   </div>
-
 
                   <div className="overview-row">
 
@@ -453,7 +434,6 @@ function AdminDashboard() {
 
                   </div>
 
-
                   <div className="overview-row">
 
                     <span>
@@ -465,7 +445,6 @@ function AdminDashboard() {
                     </strong>
 
                   </div>
-
 
                   <div className="overview-row total-row">
 

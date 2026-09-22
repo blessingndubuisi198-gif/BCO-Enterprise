@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 import "../styles/AddProduct.css";
 
 function AddProduct() {
@@ -33,7 +34,7 @@ function AddProduct() {
       }
 
       await axios.post(
-        "http://localhost:5000/api/products",
+        `${API_BASE_URL}/api/products`,
         {
           ...product,
           price: Number(product.price),

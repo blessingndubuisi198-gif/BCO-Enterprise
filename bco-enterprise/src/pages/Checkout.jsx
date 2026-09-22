@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import axios from "axios";
 import Paystack from "@paystack/inline-js";
+import API_BASE_URL from "../config/api";
 import "../styles/Checkout.css";
 
 function Checkout() {
@@ -62,7 +63,7 @@ function Checkout() {
     }
 
     await axios.post(
-      "http://localhost:5000/api/orders",
+      `${API_BASE_URL}/api/orders`,
       {
         orderItems: cart.map((item) => ({
           name: item.name,
@@ -221,19 +222,23 @@ function Checkout() {
         "ORDER ERROR:",
         error
       );
-      if(
+
+      if (
         error.response?.status === 401 ||
         error.response?.status === 403 ||
         error.message ===
         "Please login before placing your order."
       ) {
         localStorage.removeItem("userInfo");
+
         alert(
           "You session has expired. Please sign in again."
         );
+
         navigate("/login");
         return;
       }
+
       alert(
         error.response?.data?.messsage ||
         "Order failed. Please try agin."
@@ -296,6 +301,7 @@ function Checkout() {
       await createOrder(
         "Card Payment (Demo)"
       );
+
       clearCart();
 
       setShowCardModal(false);

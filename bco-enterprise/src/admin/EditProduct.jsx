@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 
 function EditProduct() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ function EditProduct() {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/products/${id}`
+          `${API_BASE_URL}/api/products/${id}`
         );
 
         setProduct(data);
@@ -44,12 +45,15 @@ function EditProduct() {
     e.preventDefault();
 
     try {
-      const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      const userInfo = JSON.parse(
+        localStorage.getItem("userInfo")
+      );
+
       console.log("USERINFO:", userInfo);
       console.log("TOKEN:", userInfo?.token);
 
       await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `${API_BASE_URL}/api/products/${id}`,
         product,
         {
           headers: {

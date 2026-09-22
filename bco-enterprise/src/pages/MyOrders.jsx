@@ -1,17 +1,17 @@
-import { useEffect, useState  } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 import "../styles/MyOrders.css";
 
 function MyOrders() {
 
-    const navigate = useNavigate();
-    const [orders, setOrders] = useState([]);
-    const [ loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-
-     useEffect(() => {
+  useEffect(() => {
     const fetchOrders = async () => {
       try {
         const userInfo = JSON.parse(
@@ -24,7 +24,7 @@ function MyOrders() {
         }
 
         const { data } = await axios.get(
-          "http://localhost:5000/api/orders/myorders",
+          `${API_BASE_URL}/api/orders/myorders`,
           {
             headers: {
               Authorization: `Bearer ${userInfo.token}`,
@@ -180,7 +180,7 @@ function MyOrders() {
                               "http"
                             )
                               ? item.image
-                              : `http://localhost:5000${item.image}`
+                              : `${API_BASE_URL}${item.image}`
                           }
                           alt={item.name}
                         />
@@ -250,4 +250,3 @@ function MyOrders() {
 }
 
 export default MyOrders;
-    

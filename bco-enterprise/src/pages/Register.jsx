@@ -2,6 +2,7 @@ import "../styles/Register.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config/api";
 import {
   FaUser,
   FaEnvelope,
@@ -23,7 +24,7 @@ function Register() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/register",
+        `${API_BASE_URL}/api/users/register`,
         {
           name,
           email,
@@ -49,11 +50,11 @@ function Register() {
   };
 
   return (
-    <div 
-    className="register-page"
-    style={{
-      backgroundImage: `url(${registerBackground})`,
-    }}
+    <div
+      className="register-page"
+      style={{
+        backgroundImage: `url(${registerBackground})`,
+      }}
     >
 
       <div className="register-card">

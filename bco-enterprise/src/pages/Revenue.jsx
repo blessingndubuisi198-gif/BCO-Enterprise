@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
+import API_BASE_URL from "../config/api";
 import "../styles/Revenue.css";
 
 function Revenue() {
@@ -23,7 +24,7 @@ function Revenue() {
       }
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/orders",
+        `${API_BASE_URL}/api/orders`,
         {
           headers: {
             Authorization: `Bearer ${userInfo.token}`,

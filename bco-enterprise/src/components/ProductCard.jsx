@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import "../styles/ProductCard.css";
+import API_BASE_URL from "../config/api";
 
 function ProductCard({ product }) {
   const { addToCart } = useContext(CartContext);
@@ -21,7 +22,7 @@ function ProductCard({ product }) {
       .replace(/^\/uploads\//, "")
       .replace(/^uploads\//, "");
 
-    return `http://localhost:5000/uploads/${cleanImage}`;
+    return `${API_BASE_URL}/uploads/${cleanImage}`;
   };
 
   const imageUrl = getImageUrl(product.image);
